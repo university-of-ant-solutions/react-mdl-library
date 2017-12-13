@@ -1,0 +1,8 @@
+export const TAB_CLASS = 'mdl-tabs__tab'
+export const PANEL_CLASS = 'mdl-tabs__panel'
+export const ACTIVE_CLASS = 'is-active'
+export const UPGRADED_CLASS = 'is-upgraded'
+export const MDL_JS_RIPPLE_EFFECT = 'mdl-js-ripple-effect'
+export const MDL_RIPPLE_CONTAINER = 'mdl-tabs__ripple-container'
+export const MDL_RIPPLE = 'mdl-ripple'
+export const MDL_JS_RIPPLE_EFFECT_IGNORE_EVENTS = 'mdl-js-ripple-effect--ignore-events'
