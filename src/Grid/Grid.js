@@ -2,7 +2,7 @@ import React from 'react'
 import ClassNames from 'classnames'
 import PropTypes from 'prop-types'
 
-function Gird(props) {
+function Grid(props) {
   const {children, className, style} = props
 
   const classes = ClassNames(`mdl-grid`, className)
@@ -13,16 +13,16 @@ function Gird(props) {
   )
 }
 
-Gird.propTypes = {
+Grid.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   style: PropTypes.object,
 }
 
-Gird.defaultProps = {
+Grid.defaultProps = {
   children: '',
   className: '',
   style: {},
 }
 
-export default Gird
+export default Grid

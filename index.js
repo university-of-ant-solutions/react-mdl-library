@@ -36,11 +36,11 @@ export {
 export {
   default as List,
   ListItem,
-} from './src/List'
+} from './src/Lists'
 export {
   default as Loading,
   Spinner,
-} from './src/List'
+} from './src/Loading'
 export {
   default as Tabs,
   Tab,
