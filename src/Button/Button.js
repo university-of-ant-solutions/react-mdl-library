@@ -13,7 +13,7 @@ import {
 } from './constants'
 import {addClass, removeClass} from '../utils'
 
-const debug = require('debug')('components:Button:Button')
+const debug = require('debug')('react-mdl-library:Button:Button')
 
 class Button extends React.PureComponent {
   constructor(props) {

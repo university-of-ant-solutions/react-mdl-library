@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ClassNames from 'classnames'
 
-const debug = require('debug')('components:Drawer:Drawer')
+const debug = require('debug')('react-mdl-library:Drawer:Drawer')
 
 class Drawer extends React.PureComponent {
   closeDrawer = evt => {

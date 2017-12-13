@@ -27,7 +27,7 @@ export {
   Cell,
 } from './src/Grid'
 export {
-  default as Layout,
+  default as LayoutApp,
   Drawer,
   Header,
   HeaderRow,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ClassNames from 'classnames'
 import {TAB_CLASS, ACTIVE_CLASS} from './constants'
 
-const debug = require('debug')('components:Tabs:Tab')
+const debug = require('debug')('react-mdl-library:Tabs:Tab')
 
 class Tab extends React.PureComponent {
   onClick = e => {
