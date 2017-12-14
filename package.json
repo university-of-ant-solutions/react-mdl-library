@@ -4,7 +4,7 @@
   "author": "Particle4dev Team",
   "version": "1.0.0-alpha.1",
   "description": "React Components for Material Design Lite",
-  "main": "./src/index.js",
+  "main": "./index.js",
   "keywords": [
     "react",
     "react-component",
