@@ -42,6 +42,9 @@ export {
   Spinner,
 } from './src/Loading'
 export {
+  default as Snackbar,
+} from './src/Snackbar'
+export {
   default as Tabs,
   Tab,
   TabContainer,
