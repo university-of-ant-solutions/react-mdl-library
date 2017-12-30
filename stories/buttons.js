@@ -1,8 +1,11 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
 
-import Button, {IconButton} from 'components/Button'
-import FontIcon from 'components/FontIcon'
+import {
+  Button,
+  IconButton,
+  FontIcon
+} from '../index'
 
 storiesOf('Button', module)
   .add('flat button', () => (
