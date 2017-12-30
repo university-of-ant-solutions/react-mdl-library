@@ -1,7 +1,9 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-
-import Grid, {Cell} from 'components/Gird'
+import {
+  Grid,
+  Cell,
+} from '../index'
 
 storiesOf('Grid', module)
   .add('default grid', () => (

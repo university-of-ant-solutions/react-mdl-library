@@ -1,9 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ClassNames from 'classnames'
-import Layout, {Drawer, Header, HeaderRow, Content} from '../../components/Layout'
-import FontIcon from '../../components/FontIcon'
-import Tabs, {Tab, TabBar, TabContainer} from '../../components/Tabs'
+import {
+  Tabs,
+  Tab,
+  TabBar,
+  TabContainer,
+  FontIcon,
+  LayoutApp as Layout,
+  Drawer,
+  Header,
+  HeaderRow,
+  Content,
+} from '../../index'
 
 const debug = require('debug')('components:TabsHeaderLayout:TabsHeaderLayout')
 
