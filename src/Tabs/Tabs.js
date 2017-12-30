@@ -1,12 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ClassNames from 'classnames'
-import Router from 'next/router'
 import {UPGRADED_CLASS} from './constants'
-
-Router.onRouteChangeStart = url => {
-  console.log(`Loading: ${url}`)
-}
 
 class Tabs extends React.Component {
   constructor(props) {

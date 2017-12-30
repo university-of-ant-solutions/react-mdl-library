@@ -1,0 +1,44 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# Dependencies
+node_modules/
+
+# Compiled output
+build
+
+# Runtime data
+data/db
+
+# Test coverage
+coverage
+.nyc_output
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editors and IDEs
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+._*
+
+# Icon
+Thumbs.db
+
+# Misc
+.DS_Store
+
+# Module directory
+.terraform/
+
+bin/.env
+bin/.clean

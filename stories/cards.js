@@ -1,16 +1,17 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
 
-import Button, {IconButton} from '../components/Button'
-import FontIcon from '../components/FontIcon'
-
-import Card, {
+import {
+  Button,
+  IconButton,
+  FontIcon,
+  Card,
   CardTitle,
   CardSupportingText,
   CardMedia,
   CardAction,
   CardMenu,
-} from '../components/Card'
+} from '../index'
 
 const demoCard = {
   demoCardWide: {

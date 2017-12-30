@@ -1,10 +1,12 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
 
-import FontIcon from 'components/FontIcon'
-import Chip from 'components/Chip'
-import Avatar from 'libraries/Avatar'
 
+import {
+  FontIcon,
+  Chip,
+  Avatar,
+} from '../index'
 function handleRequestDelete() {
   alert('You clicked the delete icon.') // eslint-disable-line no-alert
 }
