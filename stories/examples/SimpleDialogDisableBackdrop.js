@@ -1,6 +1,8 @@
 import React from 'react'
-import Button from 'components/Button'
-import Dialog from 'components/Dialog'
+import {
+  Button,
+  Dialog
+} from '../../index'
 
 class SimpleDialogDisableBackdrop extends React.Component {
   state = {

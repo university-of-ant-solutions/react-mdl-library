@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {storiesOf} from '@storybook/react'
-import Button from '../components/Button'
-import Fade from '../components/transitions/Fade'
+import {
+  Button,
+  Fade,
+} from '../index'
 
 class FadeDemo extends React.Component {
   constructor(props) {

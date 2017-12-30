@@ -1,9 +1,13 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-
-import FontIcon from '../components/FontIcon'
-import Tabs, {Tab, TabBar, TabContainer} from '../components/Tabs'
-import LayoutApp from '../components/Layout'
+import {
+  LayoutApp,
+  FontIcon,
+  Tabs,
+  Tab,
+  TabBar,
+  TabContainer,
+} from '../index'
 
 class TabWithOnChangeEvent extends React.Component {
   state = {

@@ -1,7 +1,8 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-
-import Textfield from 'components/Textfield'
+import {
+  Textfield,
+} from '../index'
 
 storiesOf('Textfield', module)
   .add('default textfield', () => (

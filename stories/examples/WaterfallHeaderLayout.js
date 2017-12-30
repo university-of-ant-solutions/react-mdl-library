@@ -1,7 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import LayoutApp, {Drawer, Header, HeaderRow, Content} from '../../components/Layout'
-import Tabs, {Tab, TabBar, TabContainer} from '../../components/Tabs'
+import {
+  Tabs,
+  Tab,
+  TabBar,
+  TabContainer,
+  LayoutApp,
+  Drawer,
+  Header,
+  HeaderRow,
+  Content,
+} from '../../index'
 
 export default class WaterfallHeaderLayout extends React.Component {
   state = {
