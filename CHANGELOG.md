@@ -1,3 +1,12 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/university-of-ant-solutions/react-mdl-library/compare/1.0.0-alpha.1...1.0.0) (2017-12-30)
+
+
+
 # Changelog
 
 Notable changes will be documented in this file.

@@ -2,7 +2,7 @@
   "name": "react-mdl-library",
   "private": true,
   "author": "Particle4dev Team",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "React Components for Material Design Lite",
   "main": "./index.js",
   "keywords": [
@@ -31,7 +31,8 @@
     "babel-preset-stage-1": "^6.24.1",
     "gh-pages": "^1.1.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "standard-version": "^4.2.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",
@@ -44,6 +45,11 @@
   "scripts": {
     "start": "./node_modules/.bin/start-storybook -p 9001 -c .storybook",
     "build-storybook": "./node_modules/.bin/build-storybook",
-    "gh-pages": "npm run build-storybook -- -o _gh-pages && gh-pages -d _gh-pages && rm -rf _gh-pages"
+    "gh-pages": "npm run build-storybook -- -o _gh-pages && gh-pages -d _gh-pages && rm -rf _gh-pages",
+    "release": "standard-version",
+    "version": "npm run release --commit-all",
+    "version:patch": "npm run release -- --release-as patch",
+    "version:minor": "npm run release -- --release-as minor",
+    "version:major": "npm run release -- --release-as major"
   }
 }
