@@ -7,7 +7,7 @@ import {
   Tab,
   TabBar,
   TabContainer,
-} from '../index'
+} from '../src/index'
 
 class TabWithOnChangeEvent extends React.Component {
   state = {

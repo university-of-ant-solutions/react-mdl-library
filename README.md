@@ -1,6 +1,8 @@
-# Project Title
+# React MDL Library
 
-One Paragraph of project description goes here
+React Components for Material Design Lite
+
+[Demo](https://university-of-ant-solutions.github.io/react-mdl-library)
 
 ## Getting Started
 

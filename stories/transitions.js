@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react'
 import {
   Button,
   Fade,
-} from '../index'
+} from '../src/index'
 
 class FadeDemo extends React.Component {
   constructor(props) {

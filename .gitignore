@@ -5,6 +5,7 @@ node_modules/
 
 # Compiled output
 build
+dist
 
 # Runtime data
 data/db

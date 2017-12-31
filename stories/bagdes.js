@@ -2,7 +2,7 @@ import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {
   Bagdes
-} from '../index'
+} from '../src/index'
 
 storiesOf('Bagdes', module)
   .add('number badge on icon', () => (

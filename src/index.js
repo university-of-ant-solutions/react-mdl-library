@@ -1,10 +1,10 @@
 export {
   default as Bagdes,
-} from './src/Bagdes'
+} from './Bagdes'
 export {
   default as Button,
   IconButton,
-} from './src/Button'
+} from './Button'
 export {
   default as Card,  
   CardMedia,
@@ -12,47 +12,47 @@ export {
   CardAction,
   CardTitle,
   CardMenu,
-} from './src/Card'
+} from './Card'
 export {
   default as Chip,
-} from './src/Chip'
+} from './Chip'
 export {
   default as Dialog,
-} from './src/Dialog'
+} from './Dialog'
 export {
   default as FontIcon,
-} from './src/FontIcon'
+} from './FontIcon'
 export {
   default as Grid,
   Cell,
-} from './src/Grid'
+} from './Grid'
 export {
   default as LayoutApp,
   Drawer,
   Header,
   HeaderRow,
   Content,
-} from './src/Layout'
+} from './Layout'
 export {
   default as List,
   ListItem,
-} from './src/Lists'
+} from './Lists'
 export {
   default as Loading,
   Spinner,
-} from './src/Loading'
+} from './Loading'
 export {
   default as Snackbar,
-} from './src/Snackbar'
+} from './Snackbar'
 export {
   default as Tabs,
   Tab,
   TabContainer,
   TabBar,
-} from './src/Tabs'
+} from './Tabs'
 export {
   default as Textfield,
-} from './src/Textfield'
+} from './Textfield'
 export {
   Fade,
-} from './src/transitions'
+} from './transitions'
