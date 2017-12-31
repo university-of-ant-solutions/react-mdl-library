@@ -12,7 +12,7 @@ import {
   Header,
   HeaderRow,
   Content,
-} from '../../index'
+} from '../../src/index'
 
 const debug = require('debug')('components:TabsHeaderLayout:TabsHeaderLayout')
 

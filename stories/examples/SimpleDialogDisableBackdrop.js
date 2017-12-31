@@ -2,7 +2,7 @@ import React from 'react'
 import {
   Button,
   Dialog
-} from '../../index'
+} from '../../src/index'
 
 class SimpleDialogDisableBackdrop extends React.Component {
   state = {

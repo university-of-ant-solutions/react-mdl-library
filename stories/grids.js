@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react'
 import {
   Grid,
   Cell,
-} from '../index'
+} from '../src/index'
 
 storiesOf('Grid', module)
   .add('default grid', () => (

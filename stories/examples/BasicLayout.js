@@ -8,7 +8,7 @@ import {
   HeaderRow,
   Content,
   FontIcon,
-} from '../../index'
+} from '../../src/index'
 
 const debug = require('debug')('components:BasicLayout:BasicLayout')
 

@@ -11,7 +11,7 @@ import {
   CardMedia,
   CardAction,
   CardMenu,
-} from '../index'
+} from '../src/index'
 
 const demoCard = {
   demoCardWide: {

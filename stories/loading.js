@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react'
 import {
   Loading,
   Spinner,
-} from '../index'
+} from '../src/index'
 
 storiesOf('Loading', module)
   .add('progress bar', () => <Loading />)

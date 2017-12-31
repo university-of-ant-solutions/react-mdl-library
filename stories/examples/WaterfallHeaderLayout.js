@@ -10,7 +10,7 @@ import {
   Header,
   HeaderRow,
   Content,
-} from '../../index'
+} from '../../src/index'
 
 export default class WaterfallHeaderLayout extends React.Component {
   state = {

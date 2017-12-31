@@ -5,7 +5,7 @@ import {
   Button,
   IconButton,
   FontIcon
-} from '../index'
+} from '../src/index'
 
 storiesOf('Button', module)
   .add('flat button', () => (

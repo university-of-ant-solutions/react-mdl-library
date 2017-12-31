@@ -7,7 +7,7 @@ import {
   List,
   ListItem,
   FontIcon,
-} from '../index'
+} from '../src/index'
 
 function handleRequestDelete() {
   alert('You clicked the delete icon.') // eslint-disable-line no-alert

@@ -1,0 +1,74 @@
+image: registry.gitlab.com/particle4dev/build-images:docker-17.07.0-nodejs-8.5.0
+
+# Predefined scopes
+
+.default-cache: &default-cache
+  key: "node_modules"
+  paths:
+    - node_modules/
+    - .yarn-cache/
+    - dist/
+
+.push-cache: &push-cache
+  cache:
+    <<: *default-cache
+    policy: push
+
+.pull-cache: &pull-cache
+  cache:
+    <<: *default-cache
+    policy: pull
+
+.docker: &docker
+  services:
+  - docker:dind
+  variables:
+    DOCKER_DRIVER: overlay
+    DOCKER_HOST: tcp://docker:2375
+  tags:
+  - docker
+
+stages:
+  - prepare
+  - test
+  - publish
+
+before_script:
+  - chmod +x -R bin/ && for f in bin/utils/*; do source $f; done
+
+prepare:
+  cache:
+    <<: *default-cache
+  stage: prepare
+  script:
+    - node --version
+    - yarn install --frozen-lockfile --cache-folder .yarn-cache
+
+test:
+  <<: *pull-cache
+  stage: test
+  script:
+    - echo "npm run test:coverage"
+  artifacts:
+    paths: [coverage]
+    expire_in: 3d
+
+lint:
+  <<: *pull-cache
+  stage: test
+  script:
+    - echo "npm run lint:codeframe"
+  artifacts:
+    paths: [coverage]
+    expire_in: 3d
+
+# deploy_patch:
+#   <<: *pull-cache
+#   stage: publish
+#   script:
+#     - git config --global user.name 'namhoang'
+#     - git config --global user.email 'particle4dev@gmail.com'
+#     - npm run deploy:patch
+#   when: manual
+#   only:
+#     - develop

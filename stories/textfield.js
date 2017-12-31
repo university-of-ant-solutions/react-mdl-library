@@ -2,7 +2,7 @@ import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {
   Textfield,
-} from '../index'
+} from '../src/index'
 
 storiesOf('Textfield', module)
   .add('default textfield', () => (
