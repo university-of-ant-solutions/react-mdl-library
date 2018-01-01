@@ -4,15 +4,21 @@ import {
   Grid,
   Cell,
 } from '../src/index'
+import {
+  DocItem,
+} from './UIExplorer'
 
 storiesOf('Grid', module)
   .add('default grid', () => (
     <div style={{width: '100%'}}>
-      <Grid className="demo-grid">
+      <DocItem
+        render={<Grid className="demo-grid">
         <Cell col={12}>12</Cell>
         <Cell col={8}>8</Cell>
         <Cell col={4}>4</Cell>
-      </Grid>
+      </Grid>}
+      />
+      
       <style jsx global>{`
         .demo-grid .mdl-cell {
           box-sizing: border-box;
@@ -25,9 +31,10 @@ storiesOf('Grid', module)
       `}</style>
     </div>
   ))
-  .add('table grid', () => (
+  .add('tablet grid', () => (
     <div style={{width: '100%'}}>
-      <Grid className="demo-grid">
+      <DocItem
+        render={<Grid className="demo-grid">
         <Cell col={6} colTablet={8}>
           6 (8 tablet)
         </Cell>
@@ -37,7 +44,8 @@ storiesOf('Grid', module)
         <Cell col={2} colTablet={4}>
           2 (4 tablet)
         </Cell>
-      </Grid>
+      </Grid>}
+      />
       <style jsx global>{`
         .demo-grid .mdl-cell {
           box-sizing: border-box;
@@ -52,7 +60,8 @@ storiesOf('Grid', module)
   ))
   .add('phone grid', () => (
     <div style={{width: '100%'}}>
-      <Grid className="demo-grid">
+      <DocItem
+        render={<Grid className="demo-grid">
         <Cell col={6} colPhone={4}>
           6 (4 phone)
         </Cell>
@@ -62,7 +71,8 @@ storiesOf('Grid', module)
         <Cell col={2} colPhone={2}>
           2 (2 phone)
         </Cell>
-      </Grid>
+      </Grid>}
+      />
       <style jsx global>{`
         .demo-grid .mdl-cell {
           box-sizing: border-box;

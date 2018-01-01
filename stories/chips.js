@@ -5,6 +5,10 @@ import {
   Chip,
   // Avatar,
 } from '../src/index'
+import {
+  DocItem,
+} from './UIExplorer'
+
 function handleRequestDelete() {
   alert('You clicked the delete icon.') // eslint-disable-line no-alert
 }
@@ -14,18 +18,38 @@ function handleClick() {
 }
 
 storiesOf('Chip', module)
-  .add('basic chip', () => <Chip label="Basic Chip" />)
+  .add('basic chip', () => (
+    <div>
+      <DocItem
+        render={<Chip label="Basic Chip" />}
+      />
+    </div>
+  ))
   .add('deletable chip', () => (
-    <Chip label="Deletable Chip" onRequestDelete={handleRequestDelete} />
+    <div>
+      <DocItem
+        render={<Chip label="Deletable Chip" onRequestDelete={handleRequestDelete} />}
+      />
+    </div>
   ))
   .add('custom delete icon', () => (
-    <Chip
-      label="Done Chip"
-      deleteIcon={<FontIcon>done</FontIcon>}
-      onRequestDelete={handleRequestDelete}
-    />
+    <div>
+      <DocItem
+        render={<Chip
+          label="Done Chip"
+          deleteIcon={<FontIcon>done</FontIcon>}
+          onRequestDelete={handleRequestDelete}
+        />}
+      />
+    </div>
   ))
-  .add('button chip', () => <Chip type="button" label="Button Chip" onClick={handleClick} />)
+  .add('button chip', () => (
+    <div>
+      <DocItem
+        render={<Chip type="button" label="Button Chip" onClick={handleClick} />}
+      />
+    </div>
+  ))
   // .add('contact chip with text', () => (
   //   <Chip
   //     label="Avatar"

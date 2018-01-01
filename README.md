@@ -2,7 +2,7 @@
 
 React Components for Material Design Lite
 
-[Demo](https://university-of-ant-solutions.github.io/react-mdl-library)
+Check out a demo [here](https://university-of-ant-solutions.github.io/react-mdl-library).
 
 ## Getting Started
 

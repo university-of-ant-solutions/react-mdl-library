@@ -1,6 +1,5 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-
 import {
   // Avatar,
   IconButton,
@@ -8,6 +7,9 @@ import {
   ListItem,
   FontIcon,
 } from '../src/index'
+import {
+  DocItem,
+} from './UIExplorer'
 
 function handleRequestDelete() {
   alert('You clicked the delete icon.') // eslint-disable-line no-alert
@@ -24,18 +26,22 @@ function onClick(evt) {
 
 storiesOf('Lists', module)
   .add('simple list', () => (
-    <List className="demo-list-item">
-      <ListItem primaryContent="Bryan Cranston" />
-      <ListItem primaryContent="Aaron Paul" />
-      <ListItem primaryContent="Bob Odenkirk" />
-    </List>
+    <DocItem
+        render={<List className="demo-list-item">
+        <ListItem primaryContent="Bryan Cranston" />
+        <ListItem primaryContent="Aaron Paul" />
+        <ListItem primaryContent="Bob Odenkirk" />
+      </List>}
+      />
   ))
   .add('icon list', () => (
-    <List className="demo-list-icon">
+    <DocItem
+      render={<List className="demo-list-icon">
       <ListItem leftIcon={<FontIcon>person</FontIcon>} primaryContent="Bryan Cranston" />
       <ListItem leftIcon={<FontIcon>person</FontIcon>} primaryContent="Aaron Paul" />
       <ListItem leftIcon={<FontIcon>person</FontIcon>} primaryContent="Bob Odenkirk" />
-    </List>
+    </List>}
+      />
   ))
   // .add('avatars and actions', () => (
   //   <List type="div" className="demo-list-action">

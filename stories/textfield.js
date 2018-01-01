@@ -3,18 +3,25 @@ import {storiesOf} from '@storybook/react'
 import {
   Textfield,
 } from '../src/index'
+import {
+  DocItem,
+} from './UIExplorer'
 
 storiesOf('Textfield', module)
   .add('default textfield', () => (
     <div>
-      <Textfield label="Text..." style={{width: '500px'}} />
-      <br />
-      <Textfield
-        label="Number..."
-        pattern="-?[0-9]*(\.[0-9]+)?"
-        error="Input is not a number!"
-        style={{width: '500px'}}
+      <DocItem
+        render={<Textfield label="Text..." style={{width: '500px'}} />}
       />
+      <DocItem
+        render={<Textfield
+          label="Number..."
+          pattern="-?[0-9]*(\.[0-9]+)?"
+          error="Input is not a number!"
+          style={{width: '500px'}}
+        />}
+      />
+      
     </div>
   ))
   .add('floating label textfield', () => (

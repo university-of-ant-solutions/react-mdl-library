@@ -1,92 +1,84 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-
 import {
   Button,
   IconButton,
   FontIcon
 } from '../src/index'
+import {
+  DocItem,
+} from './UIExplorer'
 
 storiesOf('Button', module)
   .add('flat button', () => (
     <div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button>Button</Button>
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button color="primary">Button</Button>
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button color="accent">Button</Button>
-      </div>
-      <div style={{display: 'inline'}}>
-        <Button color="accent" disabled>
-          Button
-        </Button>
-      </div>
+      <DocItem
+        render={<Button>Button</Button>}
+      />
+      <DocItem
+        render={<Button color="primary">Primary Button</Button>}
+      />
+      <DocItem
+        render={<Button color="accent">Accent Button</Button>}
+      />
+      <DocItem
+        render={<Button color="accent" disabled>Disabled Button</Button>}
+      />
     </div>
   ))
   .add('raised button', () => (
     <div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button raised ripple>
-          Button
-        </Button>
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button raised color="primary">
-          Button
-        </Button>
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button raised color="accent">
-          Button
-        </Button>
-      </div>
-      <div style={{display: 'inline'}}>
-        <Button raised color="accent" disabled>
-          Button
-        </Button>
-      </div>
+      <DocItem
+        render={<Button raised ripple>Button</Button>}
+      />
+      <DocItem
+        render={<Button raised color="primary">Button</Button>}
+      />
+      <DocItem
+        render={<Button raised color="accent">Button</Button>}
+      />
+      <DocItem
+        render={<Button raised color="accent" disabled>Button</Button>}
+      />
     </div>
   ))
   .add('float action button', () => (
     <div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button fab>
+      <DocItem
+        render={<Button fab>
           <FontIcon>add</FontIcon>
-        </Button>
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button ripple fab color="primary">
+        </Button>}
+      />
+      <DocItem
+        render={<Button ripple fab color="primary">
           <FontIcon>create</FontIcon>
-        </Button>
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button ripple fab color="accent">
+        </Button>}
+      />
+      <DocItem
+        render={<Button ripple fab color="accent">
           <FontIcon>add</FontIcon>
-        </Button>
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <Button fab color="accent" disabled>
+        </Button>}
+      />
+      <DocItem
+        render={<Button fab color="accent" disabled>
           <FontIcon>add</FontIcon>
-        </Button>
-      </div>
+        </Button>}
+      />
     </div>
   ))
   .add('icon button', () => (
     <div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <IconButton icon="close" ripple />
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <IconButton icon="chat_bubble" color="primary" />
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <IconButton icon="favorite" color="accent" />
-      </div>
-      <div style={{display: 'inline', marginRight: '20px'}}>
-        <IconButton icon="send" color="primary" disabled />
-      </div>
+      <DocItem
+        render={<IconButton icon="close" ripple />}
+      />
+      <DocItem
+        render={<IconButton icon="chat_bubble" color="primary" />}
+      />
+      <DocItem
+        render={<IconButton icon="favorite" color="accent" />}
+      />
+      <DocItem
+        render={<IconButton icon="send" color="primary" disabled />}
+      />
     </div>
   ))
