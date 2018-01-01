@@ -1,10 +1,15 @@
 import { configure, addDecorator } from '@storybook/react';
+import { setOptions } from '@storybook/addon-options'
 import Container from './Container';
 
 addDecorator(story => <Container story={story} />);
 
+setOptions({
+  name: 'React MDL Library',
+})
+
 function loadStories() {
-  require('../stories/test')
+  require('../stories/intro')
   require('../stories/buttons')
   require('../stories/cards')
   require('../stories/chips')

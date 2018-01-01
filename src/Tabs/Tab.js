@@ -18,7 +18,7 @@ class Tab extends React.PureComponent {
 
     debug(`render ${href}`)
 
-    let classes = ClassNames('mdl-layout__tab', className)
+    let classes = ClassNames('mdl-tabs__tab', className)
 
     if (selected) {
       classes = ClassNames(classes, ACTIVE_CLASS)

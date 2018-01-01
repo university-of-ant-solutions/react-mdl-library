@@ -35,6 +35,10 @@
     global "^4.3.2"
     prop-types "^15.5.10"
 
+"@storybook/addon-options@^3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.3.3.tgz#23617537e3e1ef6a4be278b097c32720603f5c5a"
+
 "@storybook/addons@^3.3.3":
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.3.3.tgz#968d98a61957bc30db642b43924c3332dbaec40e"

@@ -21,6 +21,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.3",
     "@storybook/addon-info": "^3.3.3",
+    "@storybook/addon-options": "^3.3.3",
     "@storybook/react": "^3.3.3",
     "babel-cli": "^6.26.0",
     "babel-plugin-react-require": "^3.0.0",

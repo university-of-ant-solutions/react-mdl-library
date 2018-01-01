@@ -6,7 +6,7 @@ import {PANEL_CLASS, ACTIVE_CLASS} from './constants'
 class TabContainer extends React.PureComponent {
   render() {
     const {children, href, className, selected} = this.props
-    let classes = ClassNames('mdl-layout__tab-panel', className)
+    let classes = ClassNames('mdl-tabs__panel', className)
     if (selected) {
       classes = ClassNames(ACTIVE_CLASS, classes)
     }
