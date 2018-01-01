@@ -27,7 +27,8 @@ class Tabs extends React.Component {
   render() {
     const {children: childrenProp, className} = this.props
 
-    const classes = ClassNames('mdl-tabs', className)
+    // mdl-tabs mdl-js-tabs mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events 
+    const classes = ClassNames('mdl-tabs is-upgraded', className)
 
     // get index
     const index = this.props.value ? this.props.value : this.state.value

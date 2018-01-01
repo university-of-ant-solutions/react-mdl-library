@@ -7,7 +7,7 @@ class TabBar extends React.Component {
   render() {
     const {children: childrenProp, setIndex, index, style, className} = this.props
 
-    const classes = ClassNames('mdl-layout__tab-bar', className)
+    const classes = ClassNames('mdl-tabs__tab-bar', className)
 
     const children = React.Children.map(childrenProp, child => {
       if (!React.isValidElement(child)) {
