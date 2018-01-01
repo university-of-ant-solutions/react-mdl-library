@@ -60,9 +60,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Material Design Lite](http://www.dropwizard.io/1.0.2/docs/) - Material Design Lite lets you add a Material Design look and feel to your websites.
+
+* [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 
 ## Contributing
 
@@ -74,7 +74,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Nam Hoang** - *Initial work* - [particle4dev](https://github.com/particle4dev)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
