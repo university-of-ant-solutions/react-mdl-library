@@ -29,13 +29,6 @@ class Header extends React.PureComponent {
     return (
       <header className={classes} style={style}>
         {children}
-        <style jsx>{`
-          @media screen and (max-width: 1024px) {
-            .mdl-layout__header {
-              display: flex;
-            }
-          }
-        `}</style>
       </header>
     )
   }
