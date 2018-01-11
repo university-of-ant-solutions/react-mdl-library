@@ -9,6 +9,7 @@ function List(props) {
 }
 
 List.propTypes = {
+  className: PropTypes.node,
   children: PropTypes.node,
   type: PropTypes.string,
 }
@@ -16,6 +17,8 @@ List.propTypes = {
 // Specifies the default values for props:
 List.defaultProps = {
   type: 'ul',
+  className: null,
+  children: null,
 }
 
 export default List

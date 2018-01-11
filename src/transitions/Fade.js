@@ -53,23 +53,6 @@ class Fade extends React.Component {
       >
         {node}
       </Transition>,
-      <style key={1} jsx global>{`
-        .fade-component__animation {
-          transition: all 300ms ease-out;
-        }
-        .fade-component__exiting-transition {
-          opacity: 0;
-        }
-        .fade-component__exited-transition {
-          opacity: 0;
-        }
-        .fade-component__entering-transition {
-          opacity: 0;
-        }
-        .fade-component__entered-transition {
-          opacity: 1;
-        }
-      `}</style>,
     ]
   }
 }

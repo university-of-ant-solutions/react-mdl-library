@@ -13,21 +13,19 @@ const ACTIVE = 'mdl-snackbar--active'
 function Snackbar(props) {
   const {className, style, children, show, onHide} = props
 
-  let classes = ClassNames(
-    SNACKBAR,
-    className,
-  )
+  let classes = ClassNames(SNACKBAR, className)
   if (show) {
     classes = ClassNames(classes, ACTIVE)
   }
-  
+
   debug('render')
 
   return (
-    <div
-      className={classes} style={style}>
+    <div className={classes} style={style}>
       <div className={MESSAGE}>{children}</div>
-      <button type="button" className={ACTION} onClick={onHide}>Undo</button>
+      <button type="button" className={ACTION} onClick={onHide}>
+        Undo
+      </button>
     </div>
   )
 }

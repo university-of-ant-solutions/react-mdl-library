@@ -1,8 +1,5 @@
 import React from 'react'
-import {
-  Button,
-  Dialog
-} from '../../src/index'
+import {Button, Dialog} from '../../src/index'
 
 class SimpleDialogFullWidth extends React.Component {
   state = {

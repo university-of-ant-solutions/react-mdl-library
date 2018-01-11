@@ -7,7 +7,11 @@ function CardSupportingText(props) {
 
   const classes = ClassNames('mdl-card__supporting-text', className)
 
-  return <div className={classes} style={style}>{children}</div>
+  return (
+    <div className={classes} style={style}>
+      {children}
+    </div>
+  )
 }
 
 CardSupportingText.propTypes = {
@@ -17,7 +21,7 @@ CardSupportingText.propTypes = {
 
 CardSupportingText.defaultProps = {
   className: '',
-  style:{},
+  style: {},
 }
 
 export default CardSupportingText
