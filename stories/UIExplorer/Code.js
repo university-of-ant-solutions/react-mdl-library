@@ -5,45 +5,43 @@ import ReactDOM from 'react-dom'
 import hljs from 'highlight.js'
 
 class Code extends React.PureComponent {
-
   componentDidMount() {
     this.highlightCode()
   }
-  
+
   componentDidUpdate() {
-    this.highlightCode();
+    this.highlightCode()
   }
 
-  componentWillUnmount(){}
+  componentWillUnmount() {}
 
   highlightCode = () => {
-    const { children } = this.props
+    const {children} = this.props
     // update real DOM element after component render
-    const node = ReactDOM.findDOMNode(this);
+    const node = ReactDOM.findDOMNode(this)
 
     try {
       node.innerHTML = hljs.highlight('html', children, true).value
     } catch (e) {
-      console.warn(e);
+      console.warn(e)
       node.innerHTML = children // remove syntax highlight
     }
   }
 
-  render () {
+  render() {
     return (
-      <pre style={{
-        padding: '16px 40px',
-        backgroundColor: 'rgba(0,0,0,.06)'
-      }}>
-      </pre>
+      <pre
+        style={{
+          padding: '16px 40px',
+          backgroundColor: 'rgba(0,0,0,.06)',
+        }}
+      />
     )
   }
 }
 
-Code.propTypes = {
-}
+Code.propTypes = {}
 
-Code.defaultProps = {
-}
+Code.defaultProps = {}
 
 export default Code

@@ -1,14 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ClassNames from 'classnames'
-import {
-  LayoutApp as Layout,
-  Drawer,
-  Header,
-  HeaderRow,
-  Content,
-  FontIcon,
-} from '../../src/index'
+import {LayoutApp as Layout, Drawer, Header, HeaderRow, Content, FontIcon} from '../../src/index'
 
 const debug = require('debug')('components:BasicLayout:BasicLayout')
 
