@@ -9,14 +9,16 @@ class Textfield extends React.PureComponent {
     const {error} = this.props
     const checkValidate = this.input.validity.valid
 
-    if (currentRowCount > 0 && error !== null && !checkValidate) {
+    if (currentRowCount > 0) {
       addClass(this.textField, 'is-dirty')
-      addClass(this.textField, 'is-invalid')
-    } else if (currentRowCount > 0 && (error === null || checkValidate)) {
-      addClass(this.textField, 'is-dirty')
-      removeClass(this.textField, 'is-invalid')
     } else {
       removeClass(this.textField, 'is-dirty')
+    }
+    if (error !== null && !checkValidate) {
+      addClass(this.textField, 'is-invalid')
+    } else if (error === null || checkValidate) {
+      removeClass(this.textField, 'is-invalid')
+    } else {
       removeClass(this.textField, 'is-invalid')
     }
 
@@ -29,6 +31,16 @@ class Textfield extends React.PureComponent {
 
   upHandler = () => {
     removeClass(this.textField, 'is-focused')
+  }
+
+  componentDidMount = () => {
+    const currentRowCount = this.input.value.length
+
+    if (currentRowCount > 0) {
+      addClass(this.textField, 'is-dirty')
+    } else {
+      removeClass(this.textField, 'is-dirty')
+    }
   }
 
   render() {
@@ -129,7 +141,7 @@ Textfield.propTypes = {
   rows: PropTypes.number,
   expandable: PropTypes.bool,
   floatingLabel: PropTypes.bool,
-  onChangeValue: PropTypes.func.isRequired,
+  onChangeValue: PropTypes.func,
   value: PropTypes.string,
 }
 

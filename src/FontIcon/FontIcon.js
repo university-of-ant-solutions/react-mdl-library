@@ -14,13 +14,13 @@ function FontIcon(props) {
 
 FontIcon.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.node,
+  className: PropTypes.string,
   style: PropTypes.object,
 }
 
 FontIcon.defaultProps = {
-  children: null,
-  className: null,
+  children: '',
+  className: '',
   style: {},
 }
 

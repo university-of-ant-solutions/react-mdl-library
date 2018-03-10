@@ -48,7 +48,6 @@ function ListItem(props) {
 }
 
 ListItem.propTypes = {
-  className: PropTypes.node,
   leftAvatar: PropTypes.node,
   leftIcon: PropTypes.node,
   primaryContent: PropTypes.node,
@@ -62,7 +61,6 @@ ListItem.propTypes = {
 
 // Specifies the default values for props:
 ListItem.defaultProps = {
-  className: null,
   children: '',
   type: 'li',
   leftAvatar: null,
