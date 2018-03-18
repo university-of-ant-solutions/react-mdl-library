@@ -16,6 +16,7 @@ class Chip extends React.Component {
 
   render() {
     const {
+      style,
       avatar: avatarProp,
       label,
       className,
@@ -59,7 +60,7 @@ class Chip extends React.Component {
     }
     if (type === 'button') {
       return (
-        <button onClick={onClick} className={classes}>
+        <button onClick={onClick} className={classes} style={style}>
           {avatar}
           <span className="mdl-chip__text">{label}</span>
           {deleteIcon}
@@ -67,7 +68,7 @@ class Chip extends React.Component {
       )
     }
     return (
-      <span onClick={onClick} className={classes}>
+      <span onClick={onClick} className={classes} style={style}>
         {avatar}
         <span className="mdl-chip__text">{label}</span>
         {deleteIcon}
@@ -100,6 +101,9 @@ Chip.propTypes = {
    * If set, the delete icon will be shown.
    */
   onRequestDelete: PropTypes.function,
+
+  style: PropTypes.object,
+
 }
 
 // Specifies the default values for props:
@@ -107,6 +111,7 @@ Chip.defaultProps = {
   label: '',
   className: '',
   type: 'span',
+  style: {},
 }
 
 export default Chip
