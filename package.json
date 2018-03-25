@@ -1,9 +1,9 @@
 {
   "name": "react-mdl-library",
   "author": "Particle4dev Team",
-  "version": "1.1.0",
+  "version": "2.0.0-alpha.0",
   "description": "React Components for Material Design Lite",
-  "main": "./dist/index.js",
+  "main": "./dist/mdl.min.js",
   "keywords": [
     "react",
     "react component",
@@ -19,22 +19,39 @@
     "url": "https://github.com/university-of-ant-solutions/react-mdl-library/issues"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.3.3",
-    "@storybook/addon-info": "^3.3.3",
-    "@storybook/addon-options": "^3.3.3",
-    "@storybook/react": "^3.3.3",
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-info": "^3.3.15",
+    "@storybook/addon-knobs": "^3.4.0",
+    "@storybook/addon-options": "^3.3.15",
+    "@storybook/react": "^3.3.15",
+    "autoprefixer": "^8.2.0",
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-react-require": "^3.0.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "extract-loader": "^2.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
     "gh-pages": "^1.1.0",
     "highlight.js": "^9.12.0",
+    "postcss-loader": "^2.1.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-element-to-jsx-string": "^13.1.0",
-    "standard-version": "^4.2.0"
+    "react-element-to-jsx-string": "^13.2.0",
+    "sass-loader": "^6.0.7",
+    "standard-version": "^4.3.0",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "3.11.0",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-merge": "^4.1.2"
   },
   "peerDependencies": {
     "react": "^16.2.0",
@@ -42,10 +59,13 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "lodash": "^4.17.5",
+    "material-components-web": "0.33.0",
     "react-transition-group": "^2.2.1"
   },
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist/components && ./node_modules/.bin/babel --extends=./.storybook/.babelrc -d dist src",
+    "build": "cross-env NODE_ENV=production webpack --progress --colors --config webpack.prod.js",
+    "prepublish23": "npm run build",
     "start": "./node_modules/.bin/start-storybook -p 9001 -c .storybook",
     "build-storybook": "./node_modules/.bin/build-storybook",
     "gh-pages": "npm run build-storybook -- -o _gh-pages && gh-pages -d _gh-pages && rm -rf _gh-pages",
@@ -60,7 +80,11 @@
     "deploy:minor": "npm run version:minor && npm run push",
     "deploy:major": "npm run version:major && npm run push",
     "preversion": "npm run test && npm run lint && npm run build",
-    "prepublish": "npm run build",
     "postpublish": "npm run gh-pages"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "last 2 versions",
+    "iOS 8"
+  ]
 }

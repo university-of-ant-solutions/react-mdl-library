@@ -19,3 +19,5 @@ export {default as Snackbar} from './Snackbar'
 export {default as Tabs, Tab, TabContainer, TabBar} from './Tabs'
 export {default as Textfield} from './Textfield'
 export {Fade} from './transitions'
+
+export * from '../packages'

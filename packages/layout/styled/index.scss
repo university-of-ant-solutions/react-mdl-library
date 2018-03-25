@@ -1,0 +1,181 @@
+@import "./mixins";
+@import "./variables";
+
+body {
+  bottom: auto;
+  right: auto;
+  width: auto;
+  height: 100%;
+  min-height: 655px;
+  overflow: visible;
+  overflow-y: scroll;
+}
+
+body.text {
+  height: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(0,0,0,0.87);
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.app {
+  overflow-y: hidden;
+  background: #f1f1f1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.app {
+position: relative;
+min-height: 100%;
+}
+
+.app {
+display: block;
+overflow-y: hidden;
+z-index: 1;
+}
+
+.OFyC1e {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 750px) {
+  .OFyC1e {
+    display: block;
+    width: 210px;
+    -webkit-animation: slideNav .3s cubic-bezier(0.0,0.0,0.2,1);
+    animation: slideNav .3s cubic-bezier(0.0,0.0,0.2,1);
+  }
+}
+@media only screen and (min-width: 750px) {
+  .OFyC1e {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
+.u5oEgd {
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  padding-top: 16px;
+  max-width: 100%;
+
+  background: blue;
+}
+
+/**
+ * HEADER
+ */
+
+.Wxeofe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.Wxeofe {
+  position: fixed;
+}
+
+.rDQqN {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.ecJEib .rDQqN, .ecJEib .pWgqe {
+  height: 64px;
+}
+
+.rDQqN {
+  animation: slideHeader .3s cubic-bezier(0.0,0.0,0.2,1);
+  transform: translateZ(0);
+
+  background: red;
+}
+
+/**
+ Content
+ */
+.O1bNWe {
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.O1bNWe {
+  min-height: 100%;
+  position: relative;
+}
+
+.DAbEod {
+  -webkit-animation: slideContent .3s cubic-bezier(0.0,0.0,0.2,1);
+  animation: slideContent .3s cubic-bezier(0.0,0.0,0.2,1);
+}
+
+.DAbEod {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.DAbEod {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.DAbEod {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  min-height: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 750px) {
+  .app .DAbEod {
+    margin-left: 210px;
+  }
+}
+
+.pWgqe {
+  height: 56px;
+  width: 100%;
+}
+
+.ecJEib .pWgqe {
+  height: 64px;
+}
+
+// postcss-bem-linter: define toolbar
+.mdc-layout {
+
+  &__main {
+
+  }
+
+  &__header {
+    
+  }
+}

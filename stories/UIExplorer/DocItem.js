@@ -8,7 +8,7 @@ class DocItem extends React.PureComponent {
   render() {
     const {render} = this.props
     return (
-      <div style={{marginRight: '20px'}}>
+      <div style={{marginRight: '20px', width: '100%'}}>
         {render}
         <Code>
           {reactElementToJSXString(render, {

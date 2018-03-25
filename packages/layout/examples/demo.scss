@@ -1,0 +1,29 @@
+.demo-content {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.demo-main {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+// postcss-bem-linter: define layout-grid
+@import "@material/layout-grid/mdc-layout-grid";
+
+.mdc-layout-grid-phone {
+  @include mdc-layout-grid-media-query_("phone") {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.mdc-card {
+  @include mdc-layout-grid-media-query_("phone") {
+    border-radius: 0px;
+  }
+}

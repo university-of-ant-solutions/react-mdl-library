@@ -1,0 +1,16 @@
+@import "@material/toolbar/mdc-toolbar";
+
+.mdc-toolbar {
+  &__space {
+    height: $mdc-toolbar-row-height;
+
+    @media (max-width: $mdc-toolbar-mobile-landscape-width-breakpoint)
+      and (orientation: landscape) {
+      height: $mdc-toolbar-mobile-landscape-row-height;
+    }
+
+    @media (max-width: $mdc-toolbar-mobile-breakpoint) {
+      height: $mdc-toolbar-mobile-row-height;
+    }
+  }
+}

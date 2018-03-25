@@ -1,0 +1,67 @@
+.demo-content__persistent-drawer {
+display: inline-flex;
+flex-direction: column;
+flex-grow: 1;
+height: 100%;
+box-sizing: border-box;
+}
+.demo-body__persistent-drawer {
+display: flex;
+flex-direction: row;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+height: 100%;
+width: 100%;
+}
+.demo-main {
+padding-left: 16px;
+padding-right: 16px;
+}
+
+/* PermanentDrawerAboveToolbar */
+/* Place drawer and content side by side. */
+.demo-body__permanent-drawer-above-toolbar {
+display: flex;
+flex-direction: row;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+min-height: 100%;
+width: 100%;
+}
+
+/* Stack toolbar and main on top of each other. */
+.demo-content__permanent-drawer-above-toolbar {
+display: inline-flex;
+flex-direction: column;
+flex-grow: 1;
+height: 100%;
+box-sizing: border-box;
+}
+
+/* Place drawer above toolbar shadow. */
+.mdc-drawer--permanent {
+z-index: 2;
+}
+
+
+/* End PermanentDrawerAboveToolbar */
+
+/* Stack toolbar and content on top of each other. */
+.demo-body__permanent-drawer-below-toolbar {
+display: flex;
+flex-direction: column;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+min-height: 100%;
+}
+
+/* Place drawer and main next to each other. */
+.demo-content__permanent-drawer-below-toolbar {
+display: flex;
+flex: 1 1 auto;
+height: 100%;
+box-sizing: border-box;
+}

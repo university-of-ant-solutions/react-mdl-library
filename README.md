@@ -82,8 +82,31 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+### TODOS
+
+- layout
+
+    - google plus
+
+        - code style, break component
+    
+    - news.google.com
+
+    - newsstand.google.com
+
+    http://jsbin.com/xubapej/edit?html,css,console,output
+
+- dialog
+
+- image-list
+
+- card
+
+- toolbar <header, footer>
+
+- select
+
+- layout-grid
+
+- slider
