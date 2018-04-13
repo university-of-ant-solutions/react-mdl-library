@@ -1,30 +1,35 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
-import Avatar from './index'
+import Button from './index'
+import Icon from '../icon'
 import {DocItem} from '../../stories/UIExplorer'
 import './examples/demo.scss'
 
 storiesOf('! Button', module)
-  .add('number badge on icon', () => (
+  .add('css only', () => (
     <DocItem
       render={
         <React.Fragment>
         <fieldset>
           <legend className="mdc-typography--title">Text Button</legend>
           <div>
-            <button className="mdc-button mdc-theme--text-primary-on-primary" data-demo-no-js="">
+            <Button>
               Baseline
-            </button>
-            <button className="mdc-button mdc-button--dense mdc-theme--text-primary-on-primary" data-demo-no-js="">
+            </Button>
+            <Button dense>
               Dense
-            </button>
-            <button className="mdc-button secondary-text-button mdc-theme--text-primary-on-primary" data-demo-no-js="">
-              Secondary
-            </button>
-            <button className="mdc-button mdc-theme--text-primary-on-primary" data-demo-no-js="">
-              <i className="material-icons mdc-button__icon">favorite</i>
+            </Button>
+            <Button>
+              <Icon>
+                favorite
+              </Icon>
               Icon
+            </Button>
+
+            <button className="mdc-button secondary-text-button mdc-theme--text-primary-on-primary" data-demo-no-js="">
+              Secondary (not in core)
             </button>
+
             <button className="mdc-button mdc-theme--text-primary-on-primary" data-demo-no-js="">
               <svg className="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
                 <path fill="none" d="M0 0h24v24H0z"></path>
@@ -40,18 +45,20 @@ storiesOf('! Button', module)
         <fieldset>
           <legend className="mdc-typography--title">Raised Button</legend>
           <div>
-            <button className="mdc-button mdc-button--raised" data-demo-no-js="">
+            <Button raised>
               Baseline
-            </button>
-            <button className="mdc-button mdc-button--raised mdc-button--dense" data-demo-no-js="">
+            </Button>
+            <Button dense raised>
               Dense
-            </button>
-            <button className="mdc-button mdc-button--raised secondary-filled-button" data-demo-no-js="">
-              Secondary
-            </button>
-            <button className="mdc-button mdc-button--raised" data-demo-no-js="">
-              <i className="material-icons mdc-button__icon">favorite</i>
+            </Button>
+            <Button raised>
+              <Icon>
+                favorite
+              </Icon>
               Icon
+            </Button>
+            <button className="mdc-button mdc-button--raised secondary-filled-button" data-demo-no-js="">
+              Secondary (not in core)
             </button>
             <button className="mdc-button mdc-button--raised" data-demo-no-js="">
               <svg className="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
@@ -68,18 +75,21 @@ storiesOf('! Button', module)
         <fieldset>
           <legend className="mdc-typography--title">Unelevated Button (Experimental)</legend>
           <div>
-            <button className="mdc-button mdc-button--unelevated" data-demo-no-js="">
+            <Button unelevated>
               Baseline
-            </button>
-            <button className="mdc-button mdc-button--unelevated mdc-button--dense" data-demo-no-js="">
+            </Button>
+            <Button dense unelevated>
               Dense
-            </button>
-            <button className="mdc-button mdc-button--unelevated secondary-filled-button" data-demo-no-js="">
-              Secondary
-            </button>
-            <button className="mdc-button mdc-button--unelevated" data-demo-no-js="">
-              <i className="material-icons mdc-button__icon">favorite</i>
+            </Button>
+            <Button unelevated>
+              <Icon>
+                favorite
+              </Icon>
               Icon
+            </Button>
+
+            <button className="mdc-button mdc-button--unelevated secondary-filled-button" data-demo-no-js="">
+              Secondary (not in core)
             </button>
             <button className="mdc-button mdc-button--unelevated" data-demo-no-js="">
               <svg className="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
@@ -97,18 +107,20 @@ storiesOf('! Button', module)
         <fieldset>
           <legend className="mdc-typography--title">Stroked Button (Experimental)</legend>
           <div>
-            <button className="mdc-button mdc-button--stroked" data-demo-no-js="">
+            <Button stroked>
               Baseline
-            </button>
-            <button className="mdc-button mdc-button--stroked mdc-button--dense" data-demo-no-js="">
+            </Button>
+            <Button dense stroked>
               Dense
-            </button>
-            <button className="mdc-button mdc-button--stroked secondary-stroked-button" data-demo-no-js="">
-              Secondary
-            </button>
-            <button className="mdc-button mdc-button--stroked" data-demo-no-js="">
-              <i className="material-icons mdc-button__icon">favorite</i>
+            </Button>
+            <Button stroked>
+              <Icon>
+                favorite
+              </Icon>
               Icon
+            </Button>
+            <button className="mdc-button mdc-button--stroked secondary-stroked-button" data-demo-no-js="">
+              Secondary (not in core)
             </button>
             <button className="mdc-button mdc-button--stroked" data-demo-no-js="">
               <svg className="mdc-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
