@@ -32,7 +32,7 @@ class Button extends React.Component {
     })
 
     return (
-      <button className={classes}>
+      <button className={classes} {...other}>
         {children}
       </button>
     )

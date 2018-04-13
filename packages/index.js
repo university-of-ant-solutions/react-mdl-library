@@ -1,8 +1,6 @@
 import './theme'
 import './typography'
 
-import './button'
-
 export {
   default as Toolbar,
   ToolbarRow,
@@ -22,6 +20,10 @@ export {
 } from './layout-grid'
 
 // MDC
+
+export {
+  default as MDCButton,
+} from './button'
 
 export {
   default as MDCCard,
