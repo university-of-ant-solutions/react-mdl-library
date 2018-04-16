@@ -78,7 +78,8 @@ class TabBar extends Component {
     const indicatorClasses = ClassNames('mdc-tab-bar__indicator', indicator)
     // get index
     const index = this.state.value
-    
+    const container = []
+
     const children = React.Children.map(childrenProp, (child, key) => {
       if (!React.isValidElement(child)) {
         return null
@@ -96,19 +97,32 @@ class TabBar extends Component {
           className: classes,
         })
       }
+      if (child.type && child.type.displayName === 'TabContainer') {
+        if(!child.props.href) {
+          container.push(child)
+        } else {
+          container.push(React.cloneElement(child, {
+            selected: index === child.props.href,
+          }))
+        }
+        return null
+      }
       return child
     })
 
     return (
-      <nav className={classes} ref={nav => {
-        this.nav = nav
-      }} {...other}>
-        {children}
-        <span className={indicatorClasses} style={{
-          transform: `translateX(${translateAmtForActiveTabLeft}px) scale(${scaleAmtForActiveTabWidth}, 1)`,
-          visibility: 'visible',
-        }}></span>
-      </nav>
+      <React.Fragment>
+        <nav className={classes} ref={nav => {
+          this.nav = nav
+        }} {...other}>
+          {children}
+          <span className={indicatorClasses} style={{
+            transform: `translateX(${translateAmtForActiveTabLeft}px) scale(${scaleAmtForActiveTabWidth}, 1)`,
+            visibility: 'visible',
+          }}></span>
+        </nav>
+        {container}
+      </React.Fragment>
     )
   }
 }

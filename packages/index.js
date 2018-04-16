@@ -72,6 +72,7 @@ export {
 export {
   default as MDCTabBar,
   Tab as MDCTab,
+  TabContainer as MDCTabContainer,
 } from './tabs'
 
 export {

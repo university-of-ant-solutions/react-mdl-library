@@ -3,6 +3,8 @@ import {storiesOf} from '@storybook/react'
 import TabBar, {Tab, TabBarScroller} from './index'
 import Icon from '../icon'
 import TabsWithOnChange from './examples/TabsWithOnChange'
+import TabsWithContainer from './examples/TabsWithContainer'
+import TabsWithContainerUrl from './examples/TabsWithContainerUrl'
 import {DocItem} from '../../stories/UIExplorer'
 
 storiesOf('! TabBar', module)
@@ -64,3 +66,7 @@ storiesOf('! TabBar', module)
   ))
 
   .add('with on change', () => (<TabsWithOnChange />))
+
+  .add('with container', () => (<TabsWithContainer />))
+
+  .add('with container and href', () => (<TabsWithContainerUrl />))

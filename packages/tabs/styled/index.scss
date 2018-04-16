@@ -1,1 +1,8 @@
 @import "@material/tabs/mdc-tabs";
+
+.mdc-tab-container.is-active {
+  display: block;
+}
+.mdc-tab-container {
+  display: none;
+}

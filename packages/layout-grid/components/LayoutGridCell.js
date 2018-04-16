@@ -12,8 +12,8 @@ class LayoutGridCell extends React.PureComponent {
     const {children, className, span, tablet, phone, ...other} = this.props
     const classes = ClassNames('mdc-layout-grid__cell', {
       [`mdc-layout-grid__cell--span-${span}`]: !!span,
-      [`mdc-layout-grid__cell--span-${span}-tablet`]: !!tablet,
-      [`mdc-layout-grid__cell--span-${span}-phone`]: !!phone,
+      [`mdc-layout-grid__cell--span-${tablet}-tablet`]: !!tablet,
+      [`mdc-layout-grid__cell--span-${phone}-phone`]: !!phone,
     }, className)
 
     return (
