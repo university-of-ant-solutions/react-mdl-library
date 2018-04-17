@@ -48,6 +48,12 @@ export {
 } from './drawers'
 
 export {
+  default as MDCGridList,
+  GridListTiles as MDCGridListTiles,
+  GridTile as MDCGridTile,
+} from './grid-list'
+
+export {
   default as MDCIcon,
 } from './icon'
 
