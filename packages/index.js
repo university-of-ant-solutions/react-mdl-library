@@ -27,6 +27,9 @@ export {
 
 export {
   default as MDCCard,
+  MDCCardActions,
+  MDCCardActionButtons,
+  MDCCardActionIcons,
 } from './card'
 
 export {

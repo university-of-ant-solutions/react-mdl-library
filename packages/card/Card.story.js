@@ -1,7 +1,9 @@
 import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {DocItem} from '../../stories/UIExplorer'
-import Card from './index'
+import Card, { CardActions, CardActionButtons, CardActionIcons } from './index'
+import Button from '../button'
+import Icon from '../icon'
 import './examples/demo.scss'
 
 storiesOf('! Card', module)
@@ -20,16 +22,20 @@ storiesOf('! Card', module)
             <div className="mdc-card__media-content">Title</div>
           </div>
           ... content ...
-          <div className="mdc-card__actions">
-            <div className="mdc-card__action-buttons">
-              <button className="mdc-button mdc-card__action mdc-card__action--button mdc-theme--text-primary-on-primary">Action 1</button>
-              <button className="mdc-button mdc-card__action mdc-card__action--button mdc-theme--text-primary-on-primary">Action 2</button>
-            </div>
-            <div className="mdc-card__action-icons">
-              <i className="material-icons mdc-card__action mdc-card__action--icon" tabindex="0" role="button" title="Share">share</i>
-              <i className="material-icons mdc-card__action mdc-card__action--icon" tabindex="0" role="button" title="More options">more_vert</i>
-            </div>
-          </div>
+          <CardActions>
+            <CardActionButtons>
+              <Button>
+                Action 1
+              </Button>
+              <Button>
+                Action 2
+              </Button>
+            </CardActionButtons>
+            <CardActionIcons>
+              <Icon tabindex="0" role="button" title="Share">share</Icon>
+              <Icon tabindex="0" role="button" title="More options">more_vert</Icon>
+            </CardActionIcons>
+          </CardActions>
         </Card>
       }/>
     </React.Fragment>
@@ -51,17 +57,21 @@ storiesOf('! Card', module)
       <DocItem
         render={
         <Card className="demo-card">
-          <div className="mdc-card__actions">
-            <button className="mdc-button mdc-card__action mdc-card__action--button mdc-theme--text-primary-on-primary">Action 1</button>
-            <button className="mdc-button mdc-card__action mdc-card__action--button mdc-theme--text-primary-on-primary">Action 2</button>
-          </div>
+          <CardActions>
+            <Button>
+              Action 1
+            </Button>
+            <Button>
+              Action 2
+            </Button>
+          </CardActions>
         </Card>
       }/>
       <DocItem
         render={
         <Card className="demo-card">
-          <div className="mdc-card__actions">
-            <i className="mdc-icon-toggle material-icons mdc-card__action mdc-card__action--icon"
+          <CardActions>
+            <Icon
               tabindex="0"
               role="button"
               aria-pressed="false"
@@ -70,17 +80,17 @@ storiesOf('! Card', module)
               data-toggle-on='{"content": "favorite", "label": "Remove from favorites"}'
               data-toggle-off='{"content": "favorite_border", "label": "Add to favorites"}'>
               favorite_border
-            </i>
-            <i className="material-icons mdc-card__action mdc-card__action--icon" tabindex="0" role="button" title="Share">share</i>
-            <i className="material-icons mdc-card__action mdc-card__action--icon" tabindex="0" role="button" title="More options">more_vert</i>
-          </div>
+            </Icon>
+            <Icon tabindex="0" role="button" title="Share">share</Icon>
+            <Icon tabindex="0" role="button" title="More options">more_vert</Icon>
+          </CardActions>
         </Card>
       }/>
       <DocItem
         render={
         <Card className="demo-card">
           <div className="mdc-card__actions mdc-card__actions--full-bleed">
-            <a className="mdc-button mdc-card__action mdc-card__action--button mdc-theme--text-primary-on-primary" href="#">
+            <a className="mdc-button mdc-card__action mdc-card__action--button" href="#">
               All Business Headlines
               <i className="material-icons" aria-hidden="true">arrow_forward</i>
             </a>
@@ -90,16 +100,20 @@ storiesOf('! Card', module)
       <DocItem
         render={
         <Card className="demo-card">
-          <div className="mdc-card__actions">
-            <div className="mdc-card__action-buttons">
-              <button className="mdc-button mdc-card__action mdc-card__action--button mdc-theme--text-primary-on-primary">Read</button>
-              <button className="mdc-button mdc-card__action mdc-card__action--button mdc-theme--text-primary-on-primary">Bookmark</button>
-            </div>
-            <div className="mdc-card__action-icons">
-              <i className="material-icons mdc-card__action mdc-card__action--icon" tabindex="0" role="button" title="Share">share</i>
-              <i className="material-icons mdc-card__action mdc-card__action--icon" tabindex="0" role="button" title="More options">more_vert</i>
-            </div>
-          </div>
+          <CardActions>
+            <CardActionButtons>
+              <Button>
+                Read
+              </Button>
+              <Button>
+                Bookmark
+              </Button>
+            </CardActionButtons>
+            <CardActionIcons>
+              <Icon tabindex="0" role="button" title="Share">share</Icon>
+              <Icon tabindex="0" role="button" title="More options">more_vert</Icon>
+            </CardActionIcons>
+          </CardActions>
         </Card>
       }/>
     </React.Fragment>

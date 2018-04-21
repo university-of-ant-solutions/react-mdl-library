@@ -148,3 +148,60 @@ storiesOf('! Lists', module)
       }
     />
   ))
+
+  .add('inset dividers', () => (
+    <DocItem
+      render={
+        <List avatar className="demo-list demo-list--with-avatars demo-list demo-list--icon-placeholders">
+          <ListItem>
+            <span className="mdc-list-item__graphic"></span>
+            Single-line item - section 1
+          </ListItem>
+          <ListItem>
+            <span className="mdc-list-item__graphic"></span>
+            Single-line item - section 1
+          </ListItem>
+          <ListItem>
+            <span className="mdc-list-item__graphic"></span>
+            Single-line item - section 1
+          </ListItem>
+          <li className="mdc-list-divider mdc-list-divider--inset" role="separator"></li>
+          <ListItem>
+            <span className="mdc-list-item__graphic"></span>
+            Single-line item - section 2
+          </ListItem>
+          <ListItem>
+            <span className="mdc-list-item__graphic"></span>
+            Single-line item - section 2
+          </ListItem>
+        </List>
+      }
+    />
+  ))
+
+  .add('interactive lists (with ink ripple)', () => (
+    <DocItem
+      render={
+        <nav className="mdc-list demo-list" data-demo-interactive-list="">
+          <a href="#" className="mdc-list-item mdc-ripple-upgraded">
+            <i className="material-icons mdc-list-item__graphic" aria-hidden="true">
+              network_wifi
+            </i>
+            Wi-Fi
+          </a>
+          <a href="#" className="mdc-list-item mdc-ripple-upgraded">
+            <i className="material-icons mdc-list-item__graphic" aria-hidden="true">
+              bluetooth
+            </i>
+            Bluetooth
+          </a>
+          <a href="#" className="mdc-list-item mdc-ripple-upgraded">
+            <i className="material-icons mdc-list-item__graphic" aria-hidden="true">
+              data_usage
+            </i>
+            Data Usage
+          </a>
+        </nav>
+      }
+    />
+  ))
