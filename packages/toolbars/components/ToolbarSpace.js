@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import ClassNames from 'classnames'
 
-class ToolbarSpace extends Component {
+class ToolbarSpace extends React.PureComponent {
 
   render() {
     const {className} = this.props

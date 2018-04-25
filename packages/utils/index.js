@@ -83,3 +83,38 @@ export function restoreElementTabState(el) {
     el.removeAttribute(TAB_DATA_HANDLED);
   }
 }
+
+// https://github.com/Metrime/randomID
+
+export function randomID(len, pattern) {
+  const possibilities = [
+    'abcdefghijklmnopqrstuvwxyz',
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    '0123456789',
+    "~!@#$%^&()_+-={}[];',",
+  ]
+  let chars = ''
+
+  const patternData = pattern || 'aA0'
+  patternData.split('').forEach(a => {
+    if (!isNaN(parseInt(a))) {
+      chars += possibilities[2]
+    } else if (/[a-z]/.test(a)) {
+      chars += possibilities[0]
+    } else if (/[A-Z]/.test(a)) {
+      chars += possibilities[1]
+    } else {
+      chars += possibilities[3]
+    }
+  })
+
+  let lenData = len || 30
+
+  let result = ''
+
+  while (lenData--) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length))
+  }
+
+  return result
+}

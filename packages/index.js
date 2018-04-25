@@ -79,6 +79,12 @@ export {
 } from './linear-progress'
 
 export {
+  default as MDCSnackbar,
+  SnackbarAction as MDCSnackbarAction,
+  SnackbarText as MDCSnackbarText,
+} from './snackbar'
+
+export {
   default as MDCTabBar,
   Tab as MDCTab,
   TabContainer as MDCTabContainer,

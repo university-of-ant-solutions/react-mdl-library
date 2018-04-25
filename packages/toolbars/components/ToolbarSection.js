@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import ClassNames from 'classnames'
 
-class ToolbarSection extends Component {
+class ToolbarSection extends React.PureComponent {
 
   render() {
     const {children, className, start, end, shrink, ...other} = this.props
