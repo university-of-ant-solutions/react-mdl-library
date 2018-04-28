@@ -39,10 +39,10 @@ export {
 
 export {
   default as MDCDialog,
-  MDCDialogFooter,
-  MDCDialogHeader,
-  MDCDialogBody,
-  MDCDialogSurface,
+  DialogFooter as MDCDialogFooter,
+  DialogHeader as MDCDialogHeader,
+  DialogBody as MDCDialogBody,
+  DialogSurface as MDCDialogSurface,
 } from './dialog'
 
 export {
