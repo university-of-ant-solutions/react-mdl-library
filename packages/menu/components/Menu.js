@@ -43,12 +43,9 @@ class Menu extends React.Component {
     
     /** @private {Corner} */
     this.anchorCorner_ = Corner[props.anchorCorner]
-    console.log(this.anchorCorner_)
 
     /** @private {AnchorMargin} */
     this.anchorMargin_ = {top: 0, right: 0, bottom: 0, left: 0}
-
-
 
     /** @private {number} */
     this.openAnimationEndTimerId_ = 0;
