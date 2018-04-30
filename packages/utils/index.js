@@ -54,6 +54,16 @@ export function deregisterDocumentKeydownHandler(handler) {
   document.removeEventListener('keydown', handler)
 }
 
+export function registerBodyClickHandler(handler) {
+  if(!document) return
+  document.body.addEventListener('click', handler)
+}
+
+export function deregisterBodyClickHandler(handler) {
+  if(!document) return
+  document.body.removeEventListener('click', handler)
+}
+
 const TAB_DATA = 'data-mdc-tabindex';
 const TAB_DATA_HANDLED = 'data-mdc-tabindex-handled';
 

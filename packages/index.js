@@ -75,6 +75,10 @@ export {
 } from './lists'
 
 export {
+  default as MDCMenu,
+} from './menu'
+
+export {
   default as MDCLinearProgress,
 } from './linear-progress'
 
