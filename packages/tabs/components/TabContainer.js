@@ -5,7 +5,15 @@ import isString from 'lodash/isString'
 
 const debug = require('debug')('react-mdl-library:tabs:TabContainer')
 
-class TabContainer extends React.PureComponent {
+class TabContainer extends React.Component {
+
+  shouldComponentUpdate(nextProps, nextState) {
+    // NOTE: always render when selected === true
+    if (this.props.selected !== nextProps.selected || nextProps.selected) {
+      return true
+    }
+    return false
+  }
 
   render() {
     debug('render')
