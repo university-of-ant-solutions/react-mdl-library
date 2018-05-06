@@ -128,3 +128,130 @@ export function randomID(len, pattern) {
 
   return result
 }
+
+// https://github.com/material-components/material-components-web/blob/master/packages/mdc-animation/index.js#L139
+
+/**
+ * @typedef {{
+ *   noPrefix: string,
+ *   webkitPrefix: string,
+ *   styleProperty: string
+ * }}
+ */
+let VendorPropertyMapType;
+
+/** @const {Object<string, !VendorPropertyMapType>} */
+const eventTypeMap = {
+  'animationstart': {
+    noPrefix: 'animationstart',
+    webkitPrefix: 'webkitAnimationStart',
+    styleProperty: 'animation',
+  },
+  'animationend': {
+    noPrefix: 'animationend',
+    webkitPrefix: 'webkitAnimationEnd',
+    styleProperty: 'animation',
+  },
+  'animationiteration': {
+    noPrefix: 'animationiteration',
+    webkitPrefix: 'webkitAnimationIteration',
+    styleProperty: 'animation',
+  },
+  'transitionend': {
+    noPrefix: 'transitionend',
+    webkitPrefix: 'webkitTransitionEnd',
+    styleProperty: 'transition',
+  },
+};
+
+/** @const {Object<string, !VendorPropertyMapType>} */
+const cssPropertyMap = {
+  'animation': {
+    noPrefix: 'animation',
+    webkitPrefix: '-webkit-animation',
+  },
+  'transform': {
+    noPrefix: 'transform',
+    webkitPrefix: '-webkit-transform',
+  },
+  'transition': {
+    noPrefix: 'transition',
+    webkitPrefix: '-webkit-transition',
+  },
+};
+
+/**
+ * @param {!Object} windowObj
+ * @return {boolean}
+ */
+function hasProperShape(windowObj) {
+  return (windowObj['document'] !== undefined && typeof windowObj['document']['createElement'] === 'function');
+}
+
+/**
+ * @param {string} eventType
+ * @return {boolean}
+ */
+function eventFoundInMaps(eventType) {
+  return (eventType in eventTypeMap || eventType in cssPropertyMap);
+}
+
+/**
+ * @param {string} eventType
+ * @param {!Object<string, !VendorPropertyMapType>} map
+ * @param {!Element} el
+ * @return {string}
+ */
+function getJavaScriptEventName(eventType, map, el) {
+  return map[eventType].styleProperty in el.style ? map[eventType].noPrefix : map[eventType].webkitPrefix;
+}
+
+/**
+ * Helper function to determine browser prefix for CSS3 animation events
+ * and property names.
+ * @param {!Object} windowObj
+ * @param {string} eventType
+ * @return {string}
+ */
+function getAnimationName(windowObj, eventType) {
+  if (!hasProperShape(windowObj) || !eventFoundInMaps(eventType)) {
+    return eventType;
+  }
+
+  const map = /** @type {!Object<string, !VendorPropertyMapType>} */ (
+    eventType in eventTypeMap ? eventTypeMap : cssPropertyMap
+  );
+  const el = windowObj['document']['createElement']('div');
+  let eventName = '';
+
+  if (map === eventTypeMap) {
+    eventName = getJavaScriptEventName(eventType, map, el);
+  } else {
+    eventName = map[eventType].noPrefix in el.style ? map[eventType].noPrefix : map[eventType].webkitPrefix;
+  }
+
+  return eventName;
+}
+
+// Public functions to access getAnimationName() for JavaScript events or CSS
+// property names.
+
+const transformStyleProperties = ['transform', 'WebkitTransform', 'MozTransform', 'OTransform', 'MSTransform'];
+
+/**
+ * @param {!Object} windowObj
+ * @param {string} eventType
+ * @return {string}
+ */
+export function getCorrectEventName(windowObj, eventType) {
+  return getAnimationName(windowObj, eventType);
+}
+
+/**
+ * @param {!Object} windowObj
+ * @param {string} eventType
+ * @return {string}
+ */
+export function getCorrectPropertyName(windowObj, eventType) {
+  return getAnimationName(windowObj, eventType);
+}

@@ -4,6 +4,8 @@ import ClassNames from 'classnames'
 
 const debug = require('debug')('react-mdl-library:tabs:TabBar')
 
+const ANIMATION_TIME = 240
+
 class TabBar extends Component {
   constructor(props) {
     super(props)
@@ -30,9 +32,10 @@ class TabBar extends Component {
       links,
       length,
       firstLink,
-      translateAmtForActiveTabLeft: 0,
-      scaleAmtForActiveTabWidth: 0,
+      translateAmtForActiveTabLeft: props.translateAmtForActiveTabLeft || 0,
+      scaleAmtForActiveTabWidth: props.scaleAmtForActiveTabWidth || 0,
     }
+    this.isIndicatorShown_ = !!props.scaleAmtForActiveTabWidth
   }
 
   // https://github.com/material-components/material-components-web/blob/3a1f1eae9d252e65615add7e9cabbe8bc3742412/packages/mdc-tabs/tab-bar/foundation.js#L88
@@ -51,9 +54,12 @@ class TabBar extends Component {
 
   setTab = value => {
     this.setValue(value, () => {
-      if (this.props.onChange) {
-        this.props.onChange(value)
-      }
+      setTimeout(() => {
+        if (this.props.onChange) {
+          const {translateAmtForActiveTabLeft, scaleAmtForActiveTabWidth} = this.state
+          this.props.onChange(value, {translateAmtForActiveTabLeft, scaleAmtForActiveTabWidth})
+        }
+      }, ANIMATION_TIME)
     })
   }
 
@@ -63,8 +69,24 @@ class TabBar extends Component {
     this.tabs[index] = value
   }
 
+  setStyleForIndicator = (propertyName, value) => this.indicator_.style.setProperty(propertyName, value)
+
   componentDidMount(){
-    this.setValue(this.state.value)
+    const isIndicatorFirstRender = !this.isIndicatorShown_
+
+    if(!isIndicatorFirstRender) return
+    if(isIndicatorFirstRender) this.setStyleForIndicator('transition', 'none')
+
+    this.setValue(this.state.value, () => {
+      setTimeout(() => {
+        if (isIndicatorFirstRender) {
+          // Force layout so that transform styles to take effect.
+          this.setStyleForIndicator('transition', '')
+          this.setStyleForIndicator('visibility', 'visible')
+          this.isIndicatorShown_ = true
+        }
+      }, ANIMATION_TIME)
+    })
   }
 
   render() {
@@ -79,6 +101,8 @@ class TabBar extends Component {
     // get index
     const index = this.state.value
     const container = []
+
+    const visibility = this.isIndicatorShown_ ? 'visible' : 'none'
 
     const children = React.Children.map(childrenProp, (child, key) => {
       if (!React.isValidElement(child)) {
@@ -116,9 +140,11 @@ class TabBar extends Component {
           this.nav = nav
         }} {...other}>
           {children}
-          <span className={indicatorClasses} style={{
+          <span className={indicatorClasses} ref={span => {
+            this.indicator_ = span
+          }} style={{
             transform: `translateX(${translateAmtForActiveTabLeft}px) scale(${scaleAmtForActiveTabWidth}, 1)`,
-            visibility: 'visible',
+            visibility: visibility, // 'visible'
           }}></span>
         </nav>
         {container}
@@ -137,6 +163,8 @@ TabBar.propTypes = {
    */
   onChange: PropTypes.func,
   default: PropTypes.string,
+  translateAmtForActiveTabLeft: PropTypes.number,
+  scaleAmtForActiveTabWidth: PropTypes.number,
 }
 
 TabBar.defaultProps = {
