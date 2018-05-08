@@ -92,7 +92,16 @@ class TabBar extends Component {
   render() {
     debug('render')
 
-    const {children: childrenProp, className, indicator, iconsWithText, onChange, ...other} = this.props
+    const {
+      children: childrenProp,
+      className,
+      indicator,
+      iconsWithText,
+      translateAmtForActiveTabLeft: tz, // remove from other props
+      scaleAmtForActiveTabWidth: sz, // remove from other props
+      onChange,
+      ...other,
+    } = this.props
     const {length, translateAmtForActiveTabLeft, scaleAmtForActiveTabWidth} = this.state
     const classes = ClassNames('mdc-tab-bar', {
       'mdc-tab-bar--icons-with-text': iconsWithText,
