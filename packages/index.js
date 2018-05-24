@@ -79,6 +79,14 @@ export {
 } from './menu'
 
 export {
+  default as MDCPlaceholder,
+  Circle as MDCCircle,
+  Line as MDCLine,
+  Rect as MDCRect,
+  LineWrapper as MDCLineWrapper
+} from './placeholder'
+
+export {
   default as MDCLinearProgress,
 } from './linear-progress'
 
