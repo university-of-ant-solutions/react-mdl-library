@@ -97,6 +97,13 @@ export {
 } from './snackbar'
 
 export {
+  default as MDCStepper,
+  Step as MDCStep,
+  StepLabel as MDCStepLabel,
+  StepContent as MDCStepContent,
+} from './steppers'
+
+export {
   default as MDCTabBar,
   Tab as MDCTab,
   TabContainer as MDCTabContainer,
