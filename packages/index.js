@@ -1,24 +1,6 @@
 import './theme'
 import './typography'
 
-export {
-  default as Toolbar,
-  ToolbarRow,
-  ToolbarSection,
-  ToolbarTitle,
-  ToolbarSpace,
-} from './toolbars'
-
-export {
-  default as Icon,
-} from './icon'
-
-export {
-  default as LayoutGrid,
-  LayoutGridCell,
-  LayoutGridInner,
-} from './layout-grid'
-
 // MDC
 
 export {
