@@ -9,9 +9,9 @@ export {
 
 export {
   default as MDCCard,
-  MDCCardActions,
-  MDCCardActionButtons,
-  MDCCardActionIcons,
+  CardActions as MDCCardActions,
+  CardActionButtons as MDCCardActionButtons,
+  CardActionIcons as MDCCardActionIcons,
 } from './card'
 
 export {
