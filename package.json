@@ -1,7 +1,7 @@
 {
   "name": "react-mdl-library",
   "author": "Particle4dev Team",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0-alpha.25",
   "description": "React Components for Material Design Lite",
   "main": "./dist/mdl.min.js",
   "keywords": [
@@ -19,11 +19,11 @@
     "url": "https://github.com/university-of-ant-solutions/react-mdl-library/issues"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.3.15",
-    "@storybook/addon-info": "^3.3.15",
-    "@storybook/addon-knobs": "^3.4.0",
-    "@storybook/addon-options": "^3.3.15",
-    "@storybook/react": "^3.3.15",
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-info": "^3.4.8",
+    "@storybook/addon-knobs": "^3.4.8",
+    "@storybook/addon-options": "^3.4.8",
+    "@storybook/react": "^3.4.8",
     "autoprefixer": "^8.2.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",

@@ -73,6 +73,10 @@ export {
 } from './linear-progress'
 
 export {
+  default as MDCSlider,
+} from './slider'
+
+export {
   default as MDCSnackbar,
   SnackbarAction as MDCSnackbarAction,
   SnackbarText as MDCSnackbarText,
