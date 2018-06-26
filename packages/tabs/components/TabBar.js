@@ -43,6 +43,7 @@ class TabBar extends Component {
     let s = value || this.state.firstLink
     const index = this.state.links[s]
     const activeTab = this.tabs[index]
+    if(!activeTab) return
     const translateAmtForActiveTabLeft = activeTab.getOffsetLeft()
     const scaleAmtForActiveTabWidth = activeTab.getOffsetWidth() / this.nav.offsetWidth
     return this.setState({
